@@ -129,6 +129,7 @@ if __name__ == '__main__':
                             "most_similar", "avg_similarity_score"]
                         )
                     fout.write(json.dumps(data, ensure_ascii=False) + "\n")
+                    fout.flush()
             else:
                 prompts = []
                 for task in batch:
@@ -166,4 +167,5 @@ if __name__ == '__main__':
                             "most_similar", "avg_similarity_score"]
                         )
                     fout.write(json.dumps(data, ensure_ascii=False) + "\n")
+                    fout.flush()
             progress_bar.update(len(batch))

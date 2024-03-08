@@ -211,5 +211,6 @@ if __name__ == "__main__":
                     "metadata": metadata,
                     "request_idx": request_idx
                 }) + "\n")
+                fout.flush()
                 progress_bar.update(1)
             request_idx += 1
